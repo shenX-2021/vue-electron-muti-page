@@ -1,5 +1,6 @@
 .DS_Store
-dist/electron/*
+dist/electron/*/
+dist/electron/main.js
 dist/web/*
 build/*
 !build/icons
@@ -11,7 +12,7 @@ thumbs.db
 
 
 # dist
-dist/
+# dist/
 
 # package-lock.json
 package-lock.json

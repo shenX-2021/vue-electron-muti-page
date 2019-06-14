@@ -1,0 +1,7 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "author": "gxs <gxsandzxl@163.com>",
+  "description": "A muti-page project",
+  "main": "main.js"
+}
