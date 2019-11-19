@@ -28,7 +28,19 @@ exports.htmlPlugin = function () {
         filename: filename + `/index.html`,
         chunks: ['manifest', 'vendor', filename],
         inject: true,
-        nodeModules: path.resolve(__dirname, '../node_modules')
+        nodeModules: path.resolve(__dirname, '../node_modules'),
+        templateParameters(compilation, assets, options) {
+          return {
+            // compilation: compilation,
+            // webpack: compilation.getStats().toJson(),
+            // webpackConfig: compilation.options,
+            htmlWebpackPlugin: {
+              files: assets,
+              options: options
+            },
+            process,
+          }
+        }
       }
       if (process.env.NODE_ENV === 'production') {
         let productionConfig = {
@@ -45,4 +57,3 @@ exports.htmlPlugin = function () {
   })
   return arr
 }
-
